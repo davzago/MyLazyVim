@@ -1,0 +1,1 @@
+/home/rejz/.config/omarchy/current/theme/neovim.lua
