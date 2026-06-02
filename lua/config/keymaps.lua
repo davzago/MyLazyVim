@@ -2,11 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-local map = LazyVim.safe_keymap_set
-
 -- Motions
-vim.g.mapleader = " "
-map("n", "<leader>q", function()
+
+vim.keymap.set("n", "Q", function()
   Snacks.bufdelete()
 end, { desc = "Delete Buffer" })
 
@@ -41,6 +39,3 @@ end)
 
 -- undoTree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-
---Buffer
-vim.keymap.set("n", "Q", "<cmd>bd<cr>", { desc = "Close Buffer" })
